@@ -51,6 +51,6 @@
            android:layout_height="@dimen/audio_list_item_text_height"
            android:layout_marginLeft="@dimen/audio_list_item_text_margin"
            android:layout_gravity="center_vertical"
-           android:textColor="@color/button_text"/>
+           android:textColor="#000000"/>
 
 </com.android.messaging.ui.mediapicker.AudioListItemView>
