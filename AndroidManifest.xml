@@ -87,11 +87,11 @@
         <!-- Launches a conversation (ensures correct app name shown in recents) -->
         <activity
             android:name=".ui.conversation.LaunchConversationActivity"
-            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="user"
             android:theme="@style/Invisible"
             android:noHistory="true"
             android:documentLaunchMode="always">
+                android:configChanges="orientation|keyboardHidden|screenSize|keyboard|uiMode">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <action android:name="android.intent.action.SENDTO" />
