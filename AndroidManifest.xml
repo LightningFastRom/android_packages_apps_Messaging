@@ -67,7 +67,7 @@
         <!-- Displays a list of conversations -->
         <activity
             android:name=".ui.conversationlist.ConversationListActivity"
-            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden|uiMode"
             android:screenOrientation="user"
             android:label="@string/app_name"
             android:theme="@style/BugleTheme.ConversationListActivity">
