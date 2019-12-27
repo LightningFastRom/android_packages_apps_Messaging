@@ -21,4 +21,7 @@
     <string name="show_emoticons_pref_summary">在键盘上显示表情符号键</string>
     <string name="notification_mark_as_read">标记为已读</string>
     <string name="notification_channel_messages_title">短信</string>
+
+    <string name="captcha_copy">复制 %s</string>
+    <string name="captcha_has_copied">验证码已经复制到剪贴板，长按输入框进行粘贴。</string>
 </resources>
