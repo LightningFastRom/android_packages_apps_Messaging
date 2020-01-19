@@ -38,6 +38,13 @@
          <item name="android:textColorHighlight">@color/text_highlight_color</item>
          <item name="actionBarStyle">@style/BugleActionBar</item>
          <item name="apnPreferenceStyle">@style/ApnPreference</item>
+         <item name="android:listViewStyle">@style/ListViewStyle</item>
+         <item name="actionBarPopupTheme">@style/PopupMenuStyleAppCompat</item>
+         <item name="android:actionBarPopupTheme">@style/PopupMenuStyleAppCompat</item>
+         <item name="alertDialogTheme">@style/BugleThemeAlertDialog</item>
+         <item name="android:alertDialogTheme">@style/BugleThemeAlertDialog</item>
+		<item name="android:windowLightNavigationBar">true</item>
+		 <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="LaunchTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
@@ -58,11 +65,18 @@
 		<item name="colorControlNormal">@color/icon_color</item>
     </style>
 
-    <style name="BugleTheme.DialogActivity" parent="@android:style/Theme.DeviceDefault.Light.Dialog">
+    <style name="BugleTheme.DialogActivity" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="android:colorAccent">@color/primary_color</item>
+        <item name="android:colorPrimary">@color/archived_conversation_action_bar_background_color</item>
+        <item name="android:colorPrimaryDark">@color/archived_conversation_action_bar_background_color</item>
+        <item name="android:background">@color/contextual_action_bar_background_color</item>
     </style>
 
     <style name="BugleThemeDialog" parent="BugleTheme.DialogActivity">
-        <item name="android:colorAccent">@color/lineage_accent</item>
+    </style>
+
+    <style name="BugleThemeAlertDialog" parent="@style/Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:colorAccent">@color/primary_color</item>
         <item name="android:colorPrimary">@color/archived_conversation_action_bar_background_color</item>
         <item name="android:colorPrimaryDark">@color/archived_conversation_action_bar_background_color</item>
         <item name="android:background">@color/contextual_action_bar_background_color</item>
@@ -78,7 +92,6 @@
     </style>
 
     <style name="BugleTheme.SettingsActivity" parent="BugleTheme">
-        <item name="android:textSize">@dimen/settings_list_text_size</item>
     </style>
 
     <style name="Invisible" parent="BugleBaseTheme">
@@ -492,18 +505,6 @@
     <style name="ApnPreferenceLayoutStyle">
         <item name="android:paddingLeft">?android:attr/listPreferredItemPaddingStart</item>
         <item name="android:paddingRight">?android:attr/listPreferredItemPaddingEnd</item>
-    </style>
-
-    <style name="SettingsListItem">
-        <item name="android:textSize">@dimen/settings_list_text_size</item>
-        <item name="android:textColor">@color/settings_list_text_primary</item>
-        <item name="android:background">@null</item>
-    </style>
-
-    <style name="SettingsListItemDetail">
-        <item name="android:textSize">@dimen/settings_list_detail_text_size</item>
-        <item name="android:textColor">@color/settings_list_text_secondary</item>
-        <item name="android:background">@null</item>
     </style>
 
     <style name="GroupMmsSettingItem">
