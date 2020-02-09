@@ -15,7 +15,7 @@
     limitations under the License.
 -->
 <resources>
-    <color name="primary_color">#689F38</color>
+    <color name="primary_color">#1a73e8</color>
     <color name="permission_check_activity_background">@color/primary_color</color>
 
     <!--  Action bar -->
