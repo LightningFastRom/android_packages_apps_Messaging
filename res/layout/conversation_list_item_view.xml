@@ -28,7 +28,6 @@
         android:layout_height="match_parent"
         android:gravity="center_vertical|start"
         android:baselineAligned="false"
-        android:background="@drawable/swipe_shadow_new"
         android:visibility="gone"
         android:padding="@dimen/conversation_list_item_view_padding">
         <ImageView
@@ -44,7 +43,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1" />
         <ImageView
-            android:id="@+id/crossSwipeArchiveIconRight"
+            android:id="@+id/crossSwipeDeleteIconRight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical|right"
