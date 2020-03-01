@@ -70,7 +70,6 @@ import com.android.messaging.util.MediaUtil;
 import com.android.messaging.util.OsUtil;
 import com.android.messaging.util.UiUtils;
 
-import org.lineageos.messaging.util.PrefsUtils;
 
 import java.util.Collection;
 import java.util.List;
@@ -215,15 +214,10 @@ public class ComposeMessageView extends LinearLayout
         mComposeEditText.setFilters(new InputFilter[] {
                 new LengthFilter(MmsConfig.get(ParticipantData.DEFAULT_SELF_SUB_ID)
                         .getMaxTextLimit()) });
-
-        if (PrefsUtils.isShowEmoticonsEnabled()) {
-            mComposeEditText.setInputType(mComposeEditText.getInputType()
-                    | InputType.TYPE_TEXT_VARIATION_SHORT_MESSAGE);
-        } else {
-            mComposeEditText.setInputType(mComposeEditText.getInputType()
-                    & ~InputType.TYPE_TEXT_VARIATION_SHORT_MESSAGE);
-        }
-
+		
+        mComposeEditText.setInputType(mComposeEditText.getInputType()
+		| InputType.TYPE_TEXT_VARIATION_SHORT_MESSAGE);
+		
         mSelfSendIcon = (SimIconView) findViewById(R.id.self_send_icon);
         mSelfSendIcon.setOnClickListener(new OnClickListener() {
             @Override

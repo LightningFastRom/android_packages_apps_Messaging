@@ -58,7 +58,6 @@ import com.android.messaging.util.PhoneUtils;
 import com.android.messaging.util.Typefaces;
 import com.android.messaging.util.UiUtils;
 import com.android.messaging.util.UriUtil;
-import org.lineageos.messaging.util.PrefsUtils;
 
 import java.util.List;
 
@@ -500,18 +499,10 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
         mImagePreviewView.setOnClickListener(previewClickListener);
         mAudioAttachmentView.setOnLongClickListener(this);
         mAudioAttachmentView.setVisibility(audioPreviewVisiblity);
-
-        if (PrefsUtils.isSwipeRightToDeleteEnabled()) {
-            mCrossSwipeArchiveLeftImageView.setImageDrawable(getResources()
+        mCrossSwipeArchiveLeftImageView.setImageDrawable(getResources()
+                    .getDrawable(R.drawable.ic_archive_small_dark));
+        mCrossSwipeArchiveRightImageView.setImageDrawable(getResources()
                     .getDrawable(R.drawable.ic_delete_small_dark));
-            mCrossSwipeArchiveRightImageView.setImageDrawable(getResources()
-                    .getDrawable(R.drawable.ic_archive_small_dark));
-        } else {
-            mCrossSwipeArchiveLeftImageView.setImageDrawable(getResources()
-                    .getDrawable(R.drawable.ic_archive_small_dark));
-            mCrossSwipeArchiveRightImageView.setImageDrawable(getResources()
-                    .getDrawable(R.drawable.ic_archive_small_dark));
-        }
     }
 
     public boolean isSwipeAnimatable() {
@@ -547,8 +538,7 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
 
     public void onSwipeComplete(int swipeDirection) {
         final String conversationId = mData.getConversationId();
-        if (PrefsUtils.isSwipeRightToDeleteEnabled()
-                && swipeDirection == ConversationListSwipeHelper.SWIPE_DIRECTION_RIGHT) {
+        if (swipeDirection == ConversationListSwipeHelper.SWIPE_DIRECTION_LEFT) {
             mData.deleteConversation();
             UiUtils.showSnackBar(getContext(), getRootView(),
                     getResources().getString(R.string.conversation_deleted));
