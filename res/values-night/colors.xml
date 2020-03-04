@@ -15,7 +15,10 @@
   -->
 
 <resources>
-
+	<color name="primary_color">#000000</color>
+    <color name="permission_check_activity_background">@color/primary_color</color>
+	<color name="icon_color">#ffffffff</color>
+	
     <color name="omni_color4">@*android:color/accent_device_default_dark</color>
     <color name="omni_color3">#80eeeeee</color>
 <!--    <color name="omni_color1">@*android:color/primary_dark_device_default_light</color> -->
@@ -27,7 +30,7 @@
     <color name="omni_text3">#eeeeeeee</color>
 
     <!--  Action bar -->
-    <color name="action_bar_title_text_color">#ffffff</color>
+    <color name="action_bar_title_text_color">@color/icon_color</color>
     <color name="contextual_action_bar_background_color">@color/omni_color2</color>
 
     <!-- Conversation list -->
@@ -79,8 +82,8 @@
     <!-- Activity background color -->
     <drawable name="class_zero_background">@color/omni_color1</drawable>
 
-    <color name="contact_avatar_default_background">@color/omni_color2</color>
-    <color name="contact_avatar_pressed_color">#40ffffff</color>
+    <color name="contact_avatar_default_background">@color/lineage_accent</color>
+    <color name="contact_avatar_pressed_color">@color/lineage_accent</color>
     <color name="contact_list_text_primary">@color/omni_text1</color>
     <color name="contact_list_text_secondary">@color/omni_text2</color>
 

@@ -80,7 +80,7 @@ public abstract class ConversationInput {
     }
 
     public boolean updateActionBar(final ActionBar actionBar) {
-        return false;
+        return true;
     }
 
     /**

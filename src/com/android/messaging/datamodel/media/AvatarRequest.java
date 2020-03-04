@@ -179,7 +179,7 @@ public class AvatarRequest extends UriImageRequest<AvatarRequestDescriptor> {
     }
 
     private int getBackgroundColor() {
-        return mContext.getResources().getColor(R.color.primary_color);
+        return mContext.getResources().getColor(R.color.lineage_accent);
     }
 
     @Override

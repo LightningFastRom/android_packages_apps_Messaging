@@ -83,7 +83,7 @@
     </style>
 
     <style name="BugleTheme.DialogActivity" parent="@style/Theme.AppCompat.Dialog">
-        <item name="android:colorAccent">@color/primary_color</item>
+        <item name="android:colorAccent">@color/lineage_accent</item>
         <item name="android:colorPrimary">@color/archived_conversation_action_bar_background_color</item>
         <item name="android:colorPrimaryDark">@color/archived_conversation_action_bar_background_color</item>
         <item name="android:background">@color/contextual_action_bar_background_color</item>\
@@ -93,7 +93,7 @@
     </style>
 
     <style name="BugleThemeAlertDialog" parent="@style/Theme.AppCompat.Dialog.Alert">
-        <item name="android:colorAccent">@color/primary_color</item>
+        <item name="android:colorAccent">@color/lineage_accent</item>
         <item name="android:colorPrimary">@color/archived_conversation_action_bar_background_color</item>
         <item name="android:colorPrimaryDark">@color/archived_conversation_action_bar_background_color</item>
         <item name="android:background">@color/contextual_action_bar_background_color</item>
@@ -482,7 +482,7 @@
     </style>
 
     <style name="ColorAccentBlueOverrideStyle">
-        <item name="colorAccent">@color/action_bar_background_color</item>
+        <item name="colorAccent">@color/lineage_accent</item>
     </style>
 
     <style name="ColorAccentGrayOverrideStyle">

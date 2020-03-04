@@ -24,14 +24,14 @@
         android:scaleX="0.100000"
         android:scaleY="-0.100000">
         <path
-            android:fillColor="#FF3B77DB"
+            android:fillColor="@color/primary_color"
             android:strokeWidth="1"
             android:pathData="M2375 4784 c-16 -2 -73 -9 -125 -15 -52 -6 -153 -26 -225 -44 -619 -156 -1125 -566
 -1405 -1137 -375 -765 -263 -1671 288 -2328 518 -619 1364 -893 2146 -696 621 157
 1126 567 1406 1138 375 765 263 1671 -288 2328 -326 389 -800 656 -1308 735 -95 15
 -426 28 -489 19z" />
         <path
-            android:fillColor="#FFFFFFFF"
+            android:fillColor="@color/icon_color"
             android:strokeWidth="1"
             android:pathData="M2460 2960 l0 -230 -230 0 -230 0 0 -85 0 -85 230 0 230 0 0 -230 0 -230 85 0 85 0
 0 230 0 230 230 0 230 0 0 85 0 85 -230 0 -230 0 0 230 0 230 -85 0 -85 0 0 -230z" />
