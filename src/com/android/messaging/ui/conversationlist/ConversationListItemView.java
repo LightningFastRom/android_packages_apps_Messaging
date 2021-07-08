@@ -128,7 +128,7 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
     private ImageView mContactCheckmarkView;
     private ImageView mFailedStatusIconView;
     private ImageView mCrossSwipeArchiveLeftImageView;
-    private ImageView mCrossSwipeArchiveRightImageView;
+    private ImageView mCrossSwipeDeleteRightImageView;
     private AsyncImageView mImagePreviewView;
     private AudioAttachmentView mAudioAttachmentView;
     private HostInterface mHostInterface;
@@ -153,8 +153,8 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
         mContactCheckmarkView = (ImageView) findViewById(R.id.conversation_checkmark);
         mFailedStatusIconView = (ImageView) findViewById(R.id.conversation_failed_status_icon);
         mCrossSwipeArchiveLeftImageView = (ImageView) findViewById(R.id.crossSwipeArchiveIconLeft);
-        mCrossSwipeArchiveRightImageView =
-                (ImageView) findViewById(R.id.crossSwipeArchiveIconRight);
+        mCrossSwipeDeleteRightImageView =
+                (ImageView) findViewById(R.id.crossSwipeDeleteIconRight);
         mImagePreviewView = (AsyncImageView) findViewById(R.id.conversation_image_preview);
         mAudioAttachmentView = (AudioAttachmentView) findViewById(R.id.audio_attachment_view);
         mConversationNameView.addOnLayoutChangeListener(this);
@@ -500,9 +500,10 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
         mAudioAttachmentView.setOnLongClickListener(this);
         mAudioAttachmentView.setVisibility(audioPreviewVisiblity);
         mCrossSwipeArchiveLeftImageView.setImageDrawable(getResources()
-                    .getDrawable(R.drawable.ic_archive_small_dark));
-        mCrossSwipeArchiveRightImageView.setImageDrawable(getResources()
-                    .getDrawable(R.drawable.ic_delete_small_dark));
+                    .getDrawable(R.drawable.ic_archive_small));
+		mCrossSwipeArchiveLeftImageView.setColorFilter(Color.BLACK);
+        mCrossSwipeDeleteRightImageView.setImageDrawable(getResources()
+                    .getDrawable(R.drawable.ic_delete_small));
     }
 
     public boolean isSwipeAnimatable() {
@@ -517,20 +518,23 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
     @VisibleForAnimation
     public void setSwipeTranslationX(final float translationX) {
         mSwipeableContainer.setTranslationX(translationX);
+		final Resources resources = getContext().getResources();
         if (translationX == 0) {
             mCrossSwipeBackground.setVisibility(View.GONE);
             mCrossSwipeArchiveLeftImageView.setVisibility(GONE);
-            mCrossSwipeArchiveRightImageView.setVisibility(GONE);
+            mCrossSwipeDeleteRightImageView.setVisibility(GONE);
 
             mSwipeableContainer.setBackgroundColor(Color.TRANSPARENT);
         } else {
             mCrossSwipeBackground.setVisibility(View.VISIBLE);
             if (translationX > 0) {
                 mCrossSwipeArchiveLeftImageView.setVisibility(VISIBLE);
-                mCrossSwipeArchiveRightImageView.setVisibility(GONE);
+                mCrossSwipeDeleteRightImageView.setVisibility(GONE);
+				mCrossSwipeBackground.setBackgroundColor(resources.getColor(R.color.conversation_list_swipe_Archive));
             } else {
                 mCrossSwipeArchiveLeftImageView.setVisibility(GONE);
-                mCrossSwipeArchiveRightImageView.setVisibility(VISIBLE);
+                mCrossSwipeDeleteRightImageView.setVisibility(VISIBLE);
+				mCrossSwipeBackground.setBackgroundColor(resources.getColor(R.color.conversation_list_Swipe_delete));
             }
             mSwipeableContainer.setBackgroundResource(R.drawable.swipe_shadow_drag);
         }
