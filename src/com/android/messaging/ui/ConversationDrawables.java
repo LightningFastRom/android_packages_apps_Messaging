@@ -53,7 +53,7 @@ public class ConversationDrawables {
     private int mIncomingAudioButtonColor;
     private int mSelectedBubbleColor;
     private int mThemeColor;
-    private TypedArray mColors;
+    private int mBubbleColor;
 
     public static ConversationDrawables get() {
         if (sInstance == null) {
@@ -75,11 +75,11 @@ public class ConversationDrawables {
     public void updateDrawables() {
         final Resources resources = mContext.getResources();
 
-        mIncomingBubbleDrawable = resources.getDrawable(R.drawable.msg_bubble_incoming);
+        mIncomingBubbleDrawable = resources.getDrawable(R.drawable.msg_bubble_incoming_new);
         mIncomingBubbleNoArrowDrawable =
                 resources.getDrawable(R.drawable.message_bubble_incoming_no_arrow);
         mIncomingErrorBubbleDrawable = resources.getDrawable(R.drawable.msg_bubble_error);
-        mOutgoingBubbleDrawable =  resources.getDrawable(R.drawable.msg_bubble_outgoing);
+        mOutgoingBubbleDrawable =  resources.getDrawable(R.drawable.msg_bubble_outgoing_new);
         mOutgoingBubbleNoArrowDrawable =
                 resources.getDrawable(R.drawable.message_bubble_outgoing_no_arrow);
         mAudioPlayButtonDrawable = resources.getDrawable(R.drawable.ic_audio_play);
@@ -104,7 +104,7 @@ public class ConversationDrawables {
                 resources.getColor(R.color.message_audio_button_color_incoming);
         mSelectedBubbleColor = resources.getColor(R.color.message_bubble_color_selected);
         mThemeColor = resources.getColor(R.color.primary_color);
-        mColors = resources.obtainTypedArray(R.array.letter_tile_colors);
+        mBubbleColor = resources.getColor(R.color.google_gray);
     }
 
     public Drawable getBubbleDrawable(final boolean selected, final boolean incoming,
@@ -130,13 +130,7 @@ public class ConversationDrawables {
             if (isError) {
                 color = mIncomingErrorBubbleColor;
             } else {
-                if (identifier != null &&
-                        mContext.getResources().getBoolean(R.bool.contact_colors)) {
-                    int idcolor = Math.abs(identifier.hashCode()) % mColors.length();
-                    color = mColors.getColor(idcolor, mThemeColor);
-                } else {
-                    color = mThemeColor;
-                }
+                color = mBubbleColor;
             }
         } else {
             color = mOutgoingBubbleColor;

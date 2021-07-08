@@ -537,7 +537,7 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
                 mCrossSwipeDeleteRightImageView.setVisibility(VISIBLE);
 				mCrossSwipeBackground.setBackgroundColor(resources.getColor(R.color.conversation_list_Swipe_delete));
             }
-            mSwipeableContainer.setBackgroundResource(R.drawable.swipe_shadow_drag);
+            mSwipeableContainer.setBackgroundResource(R.drawable.swipe_shadow_drag_new);
         }
     }
 
