@@ -279,7 +279,7 @@ public class ConversationMessageView extends FrameLayout implements View.OnClick
      * avatar and bubble arrow, reduce padding).
      */
     private boolean shouldShowSimplifiedVisualStyle() {
-        return mData.getCanClusterWithPreviousMessage();
+        return mData.getParticipantId() == mData.getSelfParticipantId() && !mData.getIsGroup();
     }
 
     /**
@@ -287,8 +287,7 @@ public class ConversationMessageView extends FrameLayout implements View.OnClick
      * contains media attachments or if shouldShowSimplifiedVisualStyle() is true.
      */
     private boolean shouldShowMessageBubbleArrow() {
-        return !shouldShowSimplifiedVisualStyle()
-                && !(mData.hasAttachments() || mMessageHasYouTubeLink);
+        return true;
     }
 
     /**
@@ -468,7 +467,7 @@ public class ConversationMessageView extends FrameLayout implements View.OnClick
         mMessageTextAndInfoView.setVisibility(
                 messageTextAndOrInfoVisible ? View.VISIBLE : View.GONE);
 
-        if (shouldShowSimplifiedVisualStyle()) {
+        if (!shouldShowSimplifiedVisualStyle()) {
             mContactIconView.setVisibility(View.GONE);
             mContactIconView.setImageResourceUri(null);
         } else {

@@ -38,13 +38,50 @@
          <item name="android:textColorHighlight">@color/text_highlight_color</item>
          <item name="actionBarStyle">@style/BugleActionBar</item>
          <item name="apnPreferenceStyle">@style/ApnPreference</item>
-         <item name="android:listViewStyle">@style/ListViewStyle</item>
+		 <item name="android:listViewStyle">@style/ListViewStyle</item>
+		 <item name="android:expandableListViewStyle">@style/ExpandableListViewStyle</item>
          <item name="actionBarPopupTheme">@style/PopupMenuStyleAppCompat</item>
          <item name="android:actionBarPopupTheme">@style/PopupMenuStyleAppCompat</item>
+		 <item name="android:textAppearanceSmallPopupMenu">@style/myPopupMenuTextAppearanceSmall</item>
+         <item name="android:textAppearanceLargePopupMenu">@style/myPopupMenuTextAppearanceLarge</item>
          <item name="alertDialogTheme">@style/BugleThemeAlertDialog</item>
          <item name="android:alertDialogTheme">@style/BugleThemeAlertDialog</item>
-		<item name="android:windowLightNavigationBar">true</item>
-		 <item name="android:windowLightStatusBar">true</item>
+		 <item name="actionOverflowButtonStyle">@style/DotsDarkTheme</item>
+		 <item name="actionBarTheme">@style/BackButtonDarkTheme</item>
+		 <item name="android:windowLightNavigationBar">false</item>
+		 <item name="android:windowLightStatusBar">false</item>
+		 <item name="android:forceDarkAllowed">true</item>
+    </style>
+
+    <style name="ListViewStyle" parent="@android:style/Widget.Material.Light.ListView">
+        <item name="android:overScrollMode">always</item>
+        <item name="android:textColor">@color/message_title_text</item>
+        <item name="android:textColorPrimary">@color/message_title_text</item>
+        <item name="android:textColorSecondary">@color/message_title_text</item>
+        <item name="android:textColorTertiary">@color/message_title_text</item>
+        <item name="android:background">@color/contextual_action_bar_background_color</item>
+    </style>
+	
+	<style name="ExpandableListViewStyle" parent="@android:style/Widget.DeviceDefault.ExpandableListView">
+        <item name="android:overScrollMode">always</item>
+        <item name="android:textColor">@color/message_title_text</item>
+        <item name="android:textColorPrimary">@color/message_title_text</item>
+        <item name="android:textColorSecondary">@color/message_title_text</item>
+        <item name="android:textColorTertiary">@color/message_title_text</item>
+        <item name="android:background">@color/contextual_action_bar_background_color</item>
+    </style>
+
+    <style name="PopupMenuStyleAppCompat" parent="@android:style/Theme.DeviceDefault.Light.Dialog">
+		<item name="android:popupBackground">@color/action_bar_background_color</item>
+		<item name="android:itemBackground">@color/action_bar_background_color</item>
+        <item name="android:textColor">@color/icon_color</item>
+    </style>
+    <style name="myPopupMenuTextAppearanceSmall" parent="@style/TextAppearance.AppCompat.Widget.PopupMenu.Small">
+        <item name="android:textColor">@color/icon_color</item>
+    </style>
+
+    <style name="myPopupMenuTextAppearanceLarge" parent="@style/TextAppearance.AppCompat.Widget.PopupMenu.Large">
+        <item name="android:textColor">@color/icon_color</item>
     </style>
 
     <style name="LaunchTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
@@ -66,7 +103,7 @@
     </style>
 
     <style name="BugleTheme.DialogActivity" parent="@style/Theme.AppCompat.Light.Dialog">
-        <item name="android:colorAccent">@color/primary_color</item>
+        <item name="android:colorAccent">@color/lineage_accent</item>
         <item name="android:colorPrimary">@color/archived_conversation_action_bar_background_color</item>
         <item name="android:colorPrimaryDark">@color/archived_conversation_action_bar_background_color</item>
         <item name="android:background">@color/contextual_action_bar_background_color</item>
@@ -76,7 +113,7 @@
     </style>
 
     <style name="BugleThemeAlertDialog" parent="@style/Theme.AppCompat.Light.Dialog.Alert">
-        <item name="android:colorAccent">@color/primary_color</item>
+        <item name="android:colorAccent">@color/lineage_accent</item>
         <item name="android:colorPrimary">@color/archived_conversation_action_bar_background_color</item>
         <item name="android:colorPrimaryDark">@color/archived_conversation_action_bar_background_color</item>
         <item name="android:background">@color/contextual_action_bar_background_color</item>
@@ -97,7 +134,7 @@
     <style name="Invisible" parent="BugleBaseTheme">
         <item name="android:windowBackground">@null</item>
         <item name="android:windowContentOverlay">@null</item>
-        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowIsTranslucent">false</item>
         <item name="android:windowAnimationStyle">@null</item>
         <item name="android:windowDisablePreview">true</item>
         <item name="android:windowNoDisplay">true</item>
@@ -230,7 +267,7 @@
 
     <style name="AttachmentPreviewMoreItemsText">
         <item name="android:textSize">@dimen/attachment_preview_more_items_text_size</item>
-        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColor">@color/lineage_accent</item>
     </style>
 
     <style name="AudioPickerHintText">
@@ -398,7 +435,6 @@
     </style>
 
     <style name="ComposeMessageViewMessageBodySizeStyle">
-        <item name="android:textColor">@color/message_body_size_text_color</item>
         <item name="android:textSize">@dimen/message_body_size_text_size</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:layout_gravity">right|center_vertical</item>
@@ -432,7 +468,7 @@
     </style>
 
     <style name="SnackBarText">
-        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColor">@color/icon_color</item>
         <item name="android:textSize">14sp</item>
         <item name="android:fontFamily">sans-serif</item>
     </style>
@@ -637,7 +673,7 @@
         <item name="android:paddingLeft">40dp</item>
         <item name="android:paddingRight">40dp</item>
         <item name="android:textSize">16sp</item>
-        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColor">@color/icon_color</item>
         <item name="android:fontFamily">roboto-regular</item>
     </style>
     <style name="PromoScreenTextStyle.CenterAligned">
@@ -649,7 +685,7 @@
         <item name="android:textAllCaps">true</item>
         <item name="android:textStyle">bold</item>
         <item name="android:background">?android:attr/selectableItemBackground</item>
-        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColor">@color/icon_color</item>
         <item name="android:gravity">center</item>
     </style>
     <style name="DirectoryHeaderStyle">

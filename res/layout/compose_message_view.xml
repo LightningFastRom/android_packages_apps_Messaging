@@ -20,7 +20,9 @@
     android:id="@+id/message_compose_view_container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+	android:elevation="1dp"
+	android:outlineProvider="bounds">
 
     <!-- Note it may seem off to have the layout_weight="1" on the compose bar and attachment view
      when it's the media picker that expands, but this is correct because weight also works when
@@ -76,8 +78,8 @@
                 style="@style/AttachmentPreviewCloseButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@null"
                 android:src="@drawable/ic_remove_light"
+				android:background="@drawable/send_arrow_background"
                 android:translationY="@dimen/compose_message_subject_cancel_top_offset"
                 android:contentDescription="@string/delete_subject_content_description" />
 
@@ -87,8 +89,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-			android:elevation="2dp">
+            android:orientation="horizontal">
 
             <!-- Contains compose message bubble and character counter for SMS or attachments size
                  for MMS which should be left aligned -->
@@ -112,7 +113,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:src="@drawable/ic_attachment_dark"
+                        android:src="@drawable/ic_attachment"
                         android:paddingTop="@dimen/compose_message_attachment_padding_topBottom"
                         android:paddingBottom="@dimen/compose_message_attachment_padding_topBottom"
                         android:contentDescription="@string/attachMediaButtonContentDescription" />
@@ -156,6 +157,7 @@
                         android:layout_width="@dimen/conversation_message_contact_icon_size"
                         android:layout_height="@dimen/conversation_message_contact_icon_size"
                         android:importantForAccessibility="no"
+						android:background="@drawable/send_arrow_background"
                         app:iconSize="normal"
                         app:reveal="true"
                         android:clickable="true" />

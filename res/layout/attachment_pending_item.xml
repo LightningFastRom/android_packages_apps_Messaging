@@ -27,7 +27,7 @@
         android:layout_height="@dimen/pending_attachment_size"
         android:scaleType="center"
         android:background="@android:color/white"
-        android:src="@drawable/ic_attachment_dark"
+        android:src="@drawable/ic_attachment"
         android:importantForAccessibility="no"
         android:contentDescription="@null"/>
 

@@ -14,14 +14,8 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-<selector
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:state_checked="true"
-        android:drawable="@drawable/ic_checkbox_light" />
-    <item
-        android:state_selected="true"
-        android:drawable="@drawable/ic_checkbox_light" />
-    <item
-        android:drawable="@drawable/ic_checkbox_blank_light" />
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:drawable="@drawable/ic_checkmark_circle_blue_custom" android:state_selected="true" />
+    <item android:drawable="@drawable/ic_checkmark_circle_blue_custom" android:state_checked="true" />
+    <item android:drawable="@drawable/ic_checkbox_blank" />
 </selector>

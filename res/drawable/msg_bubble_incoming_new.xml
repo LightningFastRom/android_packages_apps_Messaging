@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    Copyright (C) 2015 The Android Open Source Project
+    Copyright (C) 2015 The OmniROM Open Source Project
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -17,19 +17,18 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <rotate
-            android:fromDegrees="45"
-            android:pivotX="100%"
+            android:fromDegrees="-45"
+            android:pivotX="0%"
             android:pivotY="0%"
             android:toDegrees="0" >
             <shape android:shape="rectangle" >
-                <solid android:color="@color/message_bubble_color_outgoing" />
-				<corners android:radius="10dp" />
+                <solid android:color="@color/primary_color" />
             </shape>
         </rotate>
     </item>
-    <item android:right="8dp">
+    <item android:left="6dp">
         <shape android:shape="rectangle" >
-            <solid android:color="@color/message_bubble_color_outgoing" />
+            <solid android:color="@color/primary_color" />
             <corners android:radius="10dp" />
         </shape>
     </item>

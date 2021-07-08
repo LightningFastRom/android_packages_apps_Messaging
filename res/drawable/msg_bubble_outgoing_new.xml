@@ -14,14 +14,22 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-<menu
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:appcompat="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" >
-    <item
-        android:id="@+id/action_confirm_selection"
-        android:icon="@drawable/ic_checkmark_small"
-        android:orderInCategory="100"
-        android:title="@string/action_confirm_selection"
-        appcompat:showAsAction="always"/>
-</menu>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <rotate
+            android:fromDegrees="45"
+            android:pivotX="100%"
+            android:pivotY="0%"
+            android:toDegrees="0" >
+            <shape android:shape="rectangle" >
+                <solid android:color="@color/message_bubble_color_outgoing" />
+            </shape>
+        </rotate>
+    </item>
+    <item android:right="8dp">
+        <shape android:shape="rectangle" >
+            <solid android:color="@color/message_bubble_color_outgoing" />
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+</layer-list>

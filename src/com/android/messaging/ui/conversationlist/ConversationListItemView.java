@@ -455,7 +455,8 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
         mContactIconView.setImageResourceUri(iconUri, mData.getParticipantContactId(),
                 mData.getParticipantLookupKey(), mData.getOtherParticipantNormalizedDestination());
         mContactIconView.setVisibility(contactIconVisibility);
-        mContactIconView.setOnLongClickListener(null);
+        mContactIconView.setOnClickListener(this);
+		mContactIconView.setOnLongClickListener(this);
         mContactIconView.setClickable(false);
         mContactIconView.setLongClickable(false);
 

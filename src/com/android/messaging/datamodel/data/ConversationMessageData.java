@@ -508,9 +508,18 @@ public class ConversationMessageData {
     public final int getRawTelephonyStatus() {
         return mRawTelephonyStatus;
     }
-
-    public final String getSelfParticipantId() {
+    
+	public final String getSelfParticipantId() {
         return mSelfParticipantId;
+    }
+
+    public final int getPartsCount() {
+        return mPartsCount;
+    }
+	
+	public boolean getIsGroup() {
+        // Participant count excludes self
+        return (mPartsCount > 1);
     }
 
     public boolean getIsIncoming() {

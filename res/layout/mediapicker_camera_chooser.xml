@@ -90,7 +90,7 @@
                 android:minWidth="96dp"
                 android:minHeight="96dp"
                 android:background="@drawable/transparent_button_background"
-                android:src="@drawable/ic_checkmark_large_light"
+                android:src="@drawable/ic_checkmark_large"
                 android:contentDescription="@string/camera_take_picture"/>
 
             <FrameLayout

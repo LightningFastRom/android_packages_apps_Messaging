@@ -459,7 +459,7 @@ class CameraMediaChooser extends MediaChooser implements
             mCaptureButton.setContentDescription(context.getString(
                     R.string.camera_start_recording));
         } else {
-            mCaptureButton.setImageResource(R.drawable.ic_checkmark_large_light);
+            mCaptureButton.setImageResource(R.drawable.ic_checkmark_large);
             mCaptureButton.setContentDescription(context.getString(
                     R.string.camera_take_picture));
         }
