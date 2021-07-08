@@ -44,7 +44,7 @@
             android:layout_height="@dimen/contact_list_icon_size"
             android:importantForAccessibility="no"
             app:iconSize="normal"
-            android:clickable="true" />
+            android:clickable="false" />
 
         <ImageView
             android:id="@+id/contact_checkmark"

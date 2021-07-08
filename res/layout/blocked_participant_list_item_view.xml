@@ -20,7 +20,9 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:padding="@dimen/blocked_participant_list_item_view_padding">
+    android:padding="@dimen/blocked_participant_list_item_view_padding"
+	android:divider="?android:dividerHorizontal"
+	android:showDividers="end">
     <com.android.messaging.ui.ContactIconView
         android:id="@+id/contact_icon"
         android:layout_width="@dimen/contact_list_icon_size"

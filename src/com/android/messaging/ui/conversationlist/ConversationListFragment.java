@@ -153,7 +153,7 @@ public class ConversationListFragment extends Fragment implements ConversationLi
                 .findFirstCompletelyVisibleItemPosition();
         return firstItemPosition == 0;
     }
-
+	
     /**
      * {@inheritDoc} from Fragment
      */
@@ -163,7 +163,7 @@ public class ConversationListFragment extends Fragment implements ConversationLi
         mListBinding.unbind();
         mHost = null;
     }
-
+	
     /**
      * {@inheritDoc} from Fragment
      */

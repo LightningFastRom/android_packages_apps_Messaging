@@ -129,7 +129,7 @@ public class ConversationListActivity extends AbstractConversationListActivity {
     public boolean isSwipeAnimatable() {
         return !isInConversationListSelectMode();
     }
-
+	
     @Override
     public void onWindowFocusChanged(final boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);

@@ -455,9 +455,9 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
         mContactIconView.setImageResourceUri(iconUri, mData.getParticipantContactId(),
                 mData.getParticipantLookupKey(), mData.getOtherParticipantNormalizedDestination());
         mContactIconView.setVisibility(contactIconVisibility);
-        mContactIconView.setOnLongClickListener(this);
-        mContactIconView.setClickable(!mHostInterface.isSelectionMode());
-        mContactIconView.setLongClickable(!mHostInterface.isSelectionMode());
+        mContactIconView.setOnLongClickListener(null);
+        mContactIconView.setClickable(false);
+        mContactIconView.setLongClickable(false);
 
         mContactCheckmarkView.setVisibility(checkmarkVisiblity);
         mFailedStatusIconView.setVisibility(failStatusVisiblity);
@@ -504,6 +504,7 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
 		mCrossSwipeArchiveLeftImageView.setColorFilter(Color.BLACK);
         mCrossSwipeDeleteRightImageView.setImageDrawable(getResources()
                     .getDrawable(R.drawable.ic_delete_small));
+		mCrossSwipeDeleteRightImageView.setColorFilter(Color.WHITE);
     }
 
     public boolean isSwipeAnimatable() {
